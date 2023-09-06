@@ -6,55 +6,60 @@ import {CartContext} from "@/components/CartContext";
 import CartIcon from "./icons/CartIcon";
 
 const ProductWrapper = styled.div`
-  
+  margin-bottom:30px;
+  background-color: #E1BFBF;
+  border-radius: 40px;
+  margin: 20px;
+  padding-bottom:20px;
 `;
 
 const WhiteBox = styled(Link)`
-  background-color: #fff;
-  padding: 20px;
-  height: 120px;
+  background-color: #E1BFBF;
+  padding: 25px;
+  height: 140px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 40px;
   img{
     max-width: 100%;
-    max-height: 80px;
+    max-height: 100px;
   }
 `;
 
 const Title = styled(Link)`
-  font-weight: normal;
+  
   font-size:.9rem;
   color:inherit;
   text-decoration:none;
   margin:0;
+  text-align: center;
+  font-weight: bold;
+  margin:10px;
 `;
 
 const ProductInfoBox = styled.div`
   margin-top: 5px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const PriceRow = styled.div`
-  display: block;
-  @media screen and (min-width: 768px) {
-    display: flex;
-    gap: 5px;
-  }
-  align-items: center;
-  justify-content:space-between;
-  margin-top:2px;
+display: flex;
+  flex-direction: column;
 `;
 
 const Price = styled.div`
+font-family: Montserrat;
+margin:5px;
   font-size: 1rem;
   font-weight:400;
-  text-align: right;
+  text-align: center;
   @media screen and (min-width: 768px) {
     font-size: 1.2rem;
     font-weight:600;
-    text-align: left;
+   
   }
 `;
 

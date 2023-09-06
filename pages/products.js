@@ -6,15 +6,16 @@ import {Product} from "@/models/Product";
 import ProductsGrid from "@/components/ProductsGrid";
 import Title from "@/components/Title";
 
+
 export default function ProductsPage({products}) {
-  return (
-    <>
-      <Header />
-      <Center>
+  return (  
+    <div className=""> 
+      <Header className="flex-1"/>
+      <Center>  
         <Title>All products</Title>
         <ProductsGrid products={products} />
       </Center>
-    </>
+    </div>
   );
 }
 

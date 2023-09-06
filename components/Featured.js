@@ -7,8 +7,8 @@ import { CartContext } from "./CartContext";
 import {useContext} from "react";
 
 const Bg = styled.div`
-  background-color: #222;
-  color:#fff;
+  background-color: #D9D9D9;
+  color:#000000;
   padding: 50px 0;
 `;
 const Title = styled.h1`
@@ -20,8 +20,12 @@ const Title = styled.h1`
   }
 `;
 const Desc = styled.p`
-  color:#aaa;
+display: block;
+max-width: 600px;
+font-family: Montserrat;
+  color:#000000;
   font-size:.8rem;
+  
 `;
 const ColumnsWrapper = styled.div`
   display: grid;
@@ -66,7 +70,7 @@ export default function Featured({product}) {
         <Center>
           <ColumnsWrapper>
             <Column>
-              <div>
+              <div >
                 <Title>{product.title}</Title>
                 <Desc>
                   {product.description}

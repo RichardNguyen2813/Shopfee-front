@@ -54,9 +54,12 @@ const ProductImageBox = styled.div`
 
 const QuantityLabel = styled.span`
   padding: 0 15px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   @media screen and (min-width: 768px) {
-    display: inline-block;
+    
     padding: 0 10px;
   }
 `;

@@ -1,51 +1,58 @@
+import React from "react";
 import styled, {css} from "styled-components";
 import {primary} from "@/lib/colors";
 
+
 export const ButtonStyle = css`
   border:0;
-  padding: 5px 15px;
-  border-radius: 5px;
+  padding: 10px 15px;
+  width: 60%;
+  border-radius: 20px;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-weight:500;
+  justify-content: center;
+  margin: auto;
+   
+    background-color: #FF9900;
+    color: #FFFFFF;
   svg{
     height: 16px;
     margin-right: 5px;
   }
   ${props => props.block && css`
-    display: block;
-    width: 100%;
+  color: #FFFFFF;
   `}
   ${props => props.white && !props.outline && css`
-    background-color: #fff;
-    color: #000;
+  background-color:#FF9900;
+    color: #FFFFFF;
   `}
   ${props => props.white && props.outline && css`
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid #fff;
+  background-color:#FF9900;
+    color: #FFFFFF;
+    
   `}
   ${props => props.black && !props.outline && css`
-    background-color: #000;
-    color: #fff;
+  background-color:#FF9900;
+     color: #FFFFFF;;
   `}
   ${props => props.black && props.outline && css`
-    background-color: transparent;
-    color: #000;
-    border: 1px solid #000;
+    background-color:#FF9900;
+    color: #FFFFFF;
+    
   `}
   ${props => props.primary && !props.outline && css`
-    background-color: ${primary};
-    border: 1px solid ${primary};
-    color:#fff;
+    background-color:#FF9900;
+    width: 100%;
+    color:#FFFFFF;
   `}
   ${props => props.primary && props.outline && css`
-    background-color: transparent;
-    border: 1px solid ${primary};
-    color:${primary};
+  background-color:#FF9900;
+  color:#FFFFFF;
+    
   `}
   ${props => props.size === 'l' && css`
     font-size:1.2rem;
@@ -59,6 +66,8 @@ export const ButtonStyle = css`
 const StyledButton = styled.button`
   ${ButtonStyle}
 `;
+
+
 
 export default function Button({children,...rest}) {
   return (

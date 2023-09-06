@@ -6,18 +6,21 @@ import {CartContext} from "@/components/CartContext";
 import BarsIcon from "@/components/icons/Bars";
 
 const StyledHeader = styled.header`
-  background-color: #222;
+  background-color: none ;
 `;
 const Logo = styled(Link)`
-  color:#fff;
+  color:#000000;
   text-decoration:none;
+  font-weight: bold;
+  font-size: 30px; 
+  margin-left:40px;
   position: relative;
   z-index: 3;
 `;
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 40px 0;
 `;
 const StyledNav = styled.nav`
   ${props => props.mobileNavActive ? `
@@ -31,8 +34,8 @@ const StyledNav = styled.nav`
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 70px 20px 20px;
-  background-color: #222;
+  padding: 70px 3 0px 30px;
+  background-color: none;
   @media screen and (min-width: 768px) {
     display: flex;
     position: static;
@@ -41,9 +44,11 @@ const StyledNav = styled.nav`
 `;
 const NavLink = styled(Link)`
   display: block;
-  color:#aaa;
+  color:#000000;
   text-decoration:none;
-  padding: 10px 0;
+  margin-left: 35px;
+  margin-right:40px;
+  font-size: 20px; 
   @media screen and (min-width: 768px) {
     padding:0;
   }
@@ -66,10 +71,10 @@ export default function Header() {
   const {cartProducts} = useContext(CartContext);
   const [mobileNavActive,setMobileNavActive] = useState(false);
   return (
-    <StyledHeader>
+    <StyledHeader className="flex-1">
       <Center>
         <Wrapper>
-          <Logo href={'/'}>Shopfee</Logo>
+          <Logo href={'/'}>USCoffee</Logo>
           <StyledNav mobileNavActive={mobileNavActive}>
             <NavLink href={'/'}>Home</NavLink>
             <NavLink href={'/products'}>All products</NavLink>
